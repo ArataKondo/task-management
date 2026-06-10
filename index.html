@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ホーム</title>
+</head>
+<body>
+    <main class="home-container">
+        <header class="home-header">
+            <div>
+                <p class="subtitle"></p>
+                <h1>ホーム</h1>
+            </div>
+        </header>
+
+        <section class="summary-card">
+            <div class="summary-label">達成率</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="completion-fill"></div>
+            </div>
+            <div class="summary-values">
+                <strong id="completion-text">0%</strong>
+                <span id="completed-count">完了 0 / 0</span>
+            </div>
+        </section>
+
+        <section class="pending-card">
+            <div class="section-header">
+                <div>
+                    <h2>未消化タスク</h2>
+                    <p class="section-subtitle">優先度順に表示します</p>
+                </div>
+                <span id="pending-count">0 件</span>
+            </div>
+            <ul id="pending-list" class="pending-list"></ul>
+        </section>
+    </main>
+
+    <footer class="bottom-nav">
+        <a href="index.html" class="nav-item active">ホーム</a>
+        <a href="task.html" class="nav-item">タスク追加</a>
+        <a href="calender.html" class="nav-item">カレンダー</a>
+    </footer>
+    <script src="home.js" type="module"></script>
+</body>
+</html>

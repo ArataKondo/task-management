@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="task.js" type="module"></script>
+    <link rel="stylesheet" href="task.css">
+    <title>タスク管理</title>
+</head>
+<body>
+    <div class="container">
+        <h1>今後のタスク</h1>
+            <p class="subtext">日付・時間・カテゴリーを設定して、色で予定を分けながら素早く追加！</p>
+        <div class="input-area task-form">
+                <div class="field-group full-width">
+                    <label for="task-input">タスク</label>
+                    <input type="text" id="task-input" placeholder="例：善太と夜ご飯">
+                </div>
+                <div class="field-row">
+                    <div class="field-group">
+                        <label for="task-date">日付</label>
+                        <input type="date" id="task-date">
+                    </div>
+                    <div class="field-group">
+                        <label for="task-time">時間</label>
+                        <input type="time" id="task-time" >
+                    </div>
+                </div>
+                <div class="field-row category-row">
+                    <div class="field-group">
+                        <label for="priority-select">優先度</label>
+                        <select id="priority-select" aria-label="タスク優先度">
+                            <option value="3">高</option>
+                            <option value="2" selected>中</option>
+                            <option value="1">低</option>
+                        </select>
+                    </div>
+                    <div class="field-group category-group">
+                        <label for="category-select">カテゴリー</label>
+                        <div class="category-control">
+                            <select id="category-select" aria-label="カテゴリー選択">
+                                <option value="school">学校</option>
+                                <option value="work" selected>バイト</option>
+                                <option value="life">生活</option>
+                                <option value="other">その他</option>
+                            </select>
+                            <span id="category-swatch" class="category-swatch" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                </div>
+                <button id="add-task-btn" class="full-width">タスク追加</button>
+        </div>
+        <ul id="task-list"></ul>
+    </div>
+
+    <footer class="bottom-nav">
+        <a href="index.html" class="nav-item">ホーム</a>
+        <a href="task.html" class="nav-item active">タスク追加</a>
+        <a href="calender.html" class="nav-item">カレンダー</a>
+    </footer>
+</body>
+</html>
